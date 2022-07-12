@@ -1,0 +1,97 @@
+﻿@font-face {
+    font-family: "vazir";
+    src: url("../fonts/vazir.eot") format("eot"), url("../fonts/vazir.ttf") format("truetype"), url("../fonts/vazir.woff") format("woff"), url("../fonts/vazir.woff2") format("woff2");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: "vazir";
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#open {
+    background: #2180d8;
+    border: 3px solid #2180d8;
+    font-family: "vazir";
+    color: #fff;
+    padding: 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+
+#open:hover {
+    background: #fff;
+    color: #000;
+}
+
+.modal_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+}
+
+.modal_container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal_container .modal {
+    width: 650px;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#close {
+    background: #2180d8;
+    border: 3px solid #2180d8;
+    font-family: "vazir";
+    color: #fff;
+    padding: 5px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    margin: 20px 0;
+}
+
+#close:hover {
+    background: #fff;
+    color: #000;
+}
